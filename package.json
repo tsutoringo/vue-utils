@@ -19,6 +19,14 @@
   "exports": {
     ".": "./dist/index.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tsutoringo/vue-utils.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tsutoringo/vue-utils/issues"
+  },
+  "homepage": "https://github.com/tsutoringo/vue-utils#readme",
   "devDependencies": {
     "typescript": "^4.6.3"
   }
