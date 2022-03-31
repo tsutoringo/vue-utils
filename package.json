@@ -1,0 +1,25 @@
+{
+  "name": "@tsutoringo/vue-utils",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "prepublishOnly": "npm run build",
+    "build": "tsc"
+  },
+  "keywords": [
+    "vue"
+  ],
+  "author": "tsutoringo",
+  "license": "MIT",
+  "dependencies": {
+    "vue": "^3.2.31"
+  },
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "devDependencies": {
+    "typescript": "^4.6.3"
+  }
+}
