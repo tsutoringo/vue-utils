@@ -1,1 +1,1 @@
-export * from './utils/getVNodesByType';
+export * from './utils/';
