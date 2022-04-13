@@ -17,7 +17,8 @@
     "vue": "^3.2.31"
   },
   "exports": {
-    ".": "./dist/index.js"
+    ".": "./dist/index.js",
+    "./*": "./dist/*"
   },
   "repository": {
     "type": "git",
