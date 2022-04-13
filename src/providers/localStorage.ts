@@ -1,4 +1,4 @@
-import { InjectionKey, Ref, ref, watch } from "vue";
+import { WritableComputedRef, InjectionKey, Ref, ref, watch, computed } from "vue";
 
 export const useLocalStorage = () => {
   const store: {[key: string]: Ref<any>} = {} 
@@ -19,9 +19,23 @@ export const useLocalStorage = () => {
     return store[key];
   }
 
+  const getAsObject = <T extends {}>(key: string, inital: T, force?: boolean): WritableComputedRef<T> => {
+    const value = get(key, force);
+    if (!value.value) value.value = JSON.stringify(inital);
+    return computed<T>({
+      get () {
+        return JSON.parse(value.value) as T;
+      }, 
+      set (val: T) {
+        value.value = JSON.stringify(val);
+      }
+    });
+  }
+
   return {
     get,
-    store
+    store,
+    getAsObject
   }
 }
 
