@@ -1,4 +1,4 @@
-import { WritableComputedRef, InjectionKey, Ref, ref, watch, computed } from "vue";
+import { WritableComputedRef, InjectionKey, Ref, ref, watch, computed } from 'vue';
 
 export const useLocalStorage = () => {
   const store: {[key: string]: Ref<any>} = {} 
