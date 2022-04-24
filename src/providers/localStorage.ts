@@ -32,10 +32,24 @@ export const useLocalStorage = () => {
     });
   }
 
+  const getAsBoolean = (key: string, inital: boolean, force?: boolean): WritableComputedRef<boolean> => {
+    const value = get(key, force);
+    if (!value.value) value.value = inital.toString();
+    return computed<boolean>({
+      get () {
+        return value.value === 'true';
+      },
+      set (val: boolean) {
+        value.value = val.toString();
+      }
+    });
+  }
+
   return {
     get,
     store,
-    getAsObject
+    getAsObject,
+    getAsBoolean
   }
 }
 
