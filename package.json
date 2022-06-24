@@ -2,8 +2,9 @@
   "name": "@tsutoringo/vue-utils",
   "version": "0.2.4",
   "description": "Utils for Vue 3",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "source": "src/index.ts",
   "scripts": {
     "prepublishOnly": "npm run build",
     "build": "tsc"
@@ -17,8 +18,14 @@
     "vue": "^3.2.31"
   },
   "exports": {
-    ".": "./dist/index.js",
-    "./*": "./dist/*"
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./dist/*": {
+      "types": "./dist/*.d.ts",
+      "import": "./dist/*.js"
+    }
   },
   "repository": {
     "type": "git",
