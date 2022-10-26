@@ -1,2 +1,2 @@
 export * from './getVNodesByType';
-export * from './smartInject';
+export * from './injector';
