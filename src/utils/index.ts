@@ -1,2 +1,2 @@
 export * from './getVNodesByType';
-export * from './injector';
+export * from './safeInject';
