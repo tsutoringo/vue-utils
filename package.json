@@ -1,6 +1,6 @@
 {
   "name": "@tsutoringo/vue-utils",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Utils for Vue 3",
   "main": "dist/index.js",
   "type": "module",
