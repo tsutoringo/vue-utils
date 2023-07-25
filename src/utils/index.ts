@@ -1,2 +1,2 @@
-export * from './getVNodesByType';
-export * from './safeInject';
+export * from './getVNodesByType.js';
+export * from './safeInject.js';
